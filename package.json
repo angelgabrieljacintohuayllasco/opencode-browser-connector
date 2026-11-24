@@ -1,0 +1,42 @@
+{
+  "name": "opencode-browser-connector",
+  "version": "0.1.0",
+  "description": "MCP connector that gives OpenCode control of your real Chrome, including network interception.",
+  "author": "Angel Gabriel Jacinto Huayllasco (https://github.com/angelgabrieljacintohuayllasco)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelgabrieljacintohuayllasco/opencode-browser-connector.git"
+  },
+  "homepage": "https://github.com/angelgabrieljacintohuayllasco/opencode-browser-connector#readme",
+  "bugs": {
+    "url": "https://github.com/angelgabrieljacintohuayllasco/opencode-browser-connector/issues"
+  },
+  "keywords": [
+    "mcp",
+    "opencode",
+    "chrome-extension",
+    "browser-automation",
+    "cdp",
+    "network-interception",
+    "claude-code"
+  ],
+  "type": "module",
+  "private": true,
+  "bin": {
+    "opencode-browser": "bridge/server.mjs"
+  },
+  "scripts": {
+    "setup": "node bridge/setup.mjs",
+    "start": "node bridge/server.mjs",
+    "test": "node --test \"test/unit/*.test.mjs\"",
+    "test:e2e": "node test/e2e.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "ws": "8.22.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>OpenCode Browser Connector</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="head">
+      <div>
+        <h1>OpenCode Browser</h1>
+        <p id="connection" class="muted">Comprobando conexión</p>
+      </div>
+      <span id="dot" class="dot" aria-hidden="true"></span>
+    </header>
+
+    <section class="stats" aria-label="Actividad actual">
+      <div><strong id="attached">0</strong><span>Adjuntas</span></div>
+      <div><strong id="capturing">0</strong><span>Capturando</span></div>
+      <div><strong id="rules">0</strong><span>Reglas</span></div>
+      <div><strong id="paused">0</strong><span>Retenidos</span></div>
+    </section>
+
+    <section class="group">
+      <label class="row">
+        <span>
+          <span class="label">Permitir control</span>
+          <span class="hint">Al apagarlo se suelta todo y se rechazan comandos.</span>
+        </span>
+        <input id="enabled" type="checkbox" role="switch" />
+      </label>
+      <label class="row">
+        <span>
+          <span class="label">Ocultar secretos</span>
+          <span class="hint">Cookies, tokens y contraseñas no llegan al modelo.</span>
+        </span>
+        <input id="redact" type="checkbox" role="switch" />
+      </label>
+    </section>
+
+    <section class="group">
+      <label class="stack" for="blocked">
+        <span class="label">Dominios bloqueados</span>
+        <span class="hint">Uno por línea. Incluye subdominios.</span>
+      </label>
+      <textarea id="blocked" rows="4" spellcheck="false"></textarea>
+    </section>
+
+    <button id="stop" class="danger" type="button">Soltar todas las pestañas</button>
+
+    <section class="group log">
+      <h2>Actividad</h2>
+      <ol id="activity"></ol>
+      <p id="empty" class="muted">Sin actividad todavía. Aparecerá cuando OpenCode use el navegador.</p>
+    </section>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

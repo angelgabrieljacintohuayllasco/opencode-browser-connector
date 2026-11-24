@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "OpenCode Browser Connector",
+  "version": "0.1.0",
+  "description": "Conecta OpenCode a tu Chrome por MCP: controla pestañas, DOM, red y cookies desde tu agente local.",
+  "author": "Angel Gabriel Jacinto Huayllasco",
+  "homepage_url": "https://github.com/angelgabrieljacintohuayllasco/opencode-browser-connector",
+  "minimum_chrome_version": "125",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "OpenCode Browser Connector",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "permissions": [
+    "alarms",
+    "bookmarks",
+    "browsingData",
+    "cookies",
+    "debugger",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "downloads",
+    "history",
+    "management",
+    "storage",
+    "tabGroups",
+    "tabs",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8k/no7/2XHNLZAPvhX+/IpnCX0LDKFmx8A9m0c79VFhvceyb3Z8Tp2hpjffzPTEMG9BgD/Eti0XO+qLBC9yzJ+FFXTrev7L1vDlvAdajVnu5GTpmrgGMQ5K2xXkUC3FAyo7Ia26tEYlheo/3YZV2B5aMSGbBS5RWbfWeJTUlM0M9YMCaLSGw9QKahFhAQRi1ndLtpvXW62LT0FumtkJ91FJbm8D5jKMXd8Np6RvQQswjGh8QKaHQghabEhlr8aQec2tTyNRiRyMczFdM/Go7BMekchzzsCo6jYXjDyamOVPCwJijIQEiCtsDeXWNEs3Fk/yhUxJMxZtKDma/D5o+xQIDAQAB"
+}

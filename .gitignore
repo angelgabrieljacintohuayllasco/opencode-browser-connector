@@ -1,0 +1,6 @@
+node_modules/
+extension/pairing.json
+*.log
+.e2e-profile/
+.DS_Store
+Thumbs.db
